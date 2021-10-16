@@ -1,0 +1,251 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root{
+    --mainColor: #152D35;
+    --containerColor: #D4ECDD;
+    --borderRadius: 10px;
+}
+
+
+/* Basic Aligns */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',
+    sans-serif;
+}
+
+body{
+    background: var(--mainColor);
+    overflow: hidden;
+}
+
+body img{
+    opacity: .7;
+    background-color: #000;
+}
+
+span{
+    position: absolute;
+    z-index: 2;
+    color: var(--containerColor);
+    font-size: 100px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    font-weight: bolder;
+}
+
+/* Main Section */
+
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 350px;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--containerColor);
+    border-radius: var(--borderRadius);
+    box-shadow: 0 3px 3px #444;
+}
+
+.container h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: var(--mainColor)
+}
+
+body img{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main img{
+    width: 100%;
+    overflow-x: hidden;
+    z-index: -1;
+    position: absolute;
+    opacity: .5;
+}
+
+.signupBtn{
+    position: absolute;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    top: 65%;
+    left: 43%;
+    width: 100px;
+    height: 35px;
+    border-radius: 30px;
+    border: none;
+    background: var(--containerColor);
+    transition: .4s ease-in;
+    color: var(--mainColor);
+    font-weight: bold;
+}
+
+.loginBtn{
+    position: absolute;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    top: 65%;
+    right: 38%;
+    width: 100px;
+    height: 35px;
+    border-radius: 30px;
+    border: none;
+    background: var(--containerColor);
+    transition: .4s ease-in;
+    color: var(--mainColor);
+    font-weight: bold;
+}
+
+.signupBtn:hover, .loginBtn:hover{
+    box-shadow: 0 5px 5px #444;
+    letter-spacing: 2px;
+    color: var(--containerColor);
+    background: #222;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.loading-container{
+    position: absolute;
+    color: var(--containerColor);
+    font-size: 30px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.loading-container i{
+    margin-left: 10px;
+    animation: spin 1s linear infinite;
+}
+/* Input Section */
+.input{
+    margin-top: 20px;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid var(--mainColor);
+    outline: none;
+    width: 180px;
+    height: 30px;
+    padding: 5px 5px;
+}
+.input:focus{
+    color: var(--mainColor);
+}
+
+/* Button Section */
+.signup-btn, .login-btn{
+    margin-top: 40px;
+    width: 80px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background: var(--mainColor);
+    color: var(--containerColor);
+    font-weight: bold;
+    border-radius: 30px;
+    transition: .3s ease-in;
+}
+.signup-btn:hover,
+.login-btn:hover {
+    background: #2f6170;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 3px #999;
+}
+/* Login-with Section */
+.social-login{
+    margin-top: 20px;
+}
+.social{
+    margin-top: 20px;
+}
+.container a{
+    margin-top: 20px;
+}
+.social-login a{
+    text-decoration: none;
+}
+.social-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.social a{
+    color: var(--mainColor);
+    transition: .3s ease-in;
+}
+
+.social a:hover {
+    color: #2f6170;
+    text-shadow: 0 3px 3px #999;
+}
+
+i{
+    font-size: 30px;
+}
+
+.container p {
+    margin-top: 20px;
+    font-size: 15px;
+    color: var(--textColor);
+}
+
+.container p a {
+    color:#152D35;
+}
+
+.container a{
+    color:#152D35;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 550px) {
+    .container {
+        width: 90%;
+    }
+    span {
+        font-size: 50px;
+    }
+    .signupBtn {
+        left: 30%;
+    }
+
+    .loginBtn {
+        right: 5%;
+    }
+}
